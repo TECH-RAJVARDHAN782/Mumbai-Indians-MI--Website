@@ -1,0 +1,102 @@
+:root{
+  --accent:#0057b8;
+  --bg:#071025;
+  --card:#081225;
+  --muted:#9fb0c6;
+  --glass: rgba(255,255,255,0.03);
+  font-family:Inter,system-ui,Segoe UI,Roboto,Arial;
+}
+*{box-sizing:border-box}
+html,body{
+  height:100%;
+  margin:0;
+  background:linear-gradient(180deg,var(--bg),#02101b);
+  color:#eaf6ff;
+}
+
+header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:16px 20px;
+  backdrop-filter:blur(6px);
+  position:sticky;
+  top:0;
+  background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
+  z-index:30;
+}
+
+.logo {
+  width:82px;
+  height:72px;
+  border-radius:10px;
+  object-fit:cover;
+}
+
+
+nav a{
+  color:var(--muted);
+  text-decoration:none;
+  margin-left:14px;
+  font-weight:700;
+}
+
+.container{max-width:1100px;margin:26px auto;padding:0 18px}
+.grid{display:grid;grid-template-columns:1fr 360px;gap:20px}
+.card{background:var(--card);border-radius:12px;padding:16px;box-shadow:0 6px 20px rgba(0,0,0,0.6)}
+
+.players{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+
+.player{
+  display:flex;gap:12px;align-items:center;
+  background:var(--glass);
+  padding:10px;border-radius:10px
+}
+
+.player img{width:64px;height:64px;border-radius:8px;object-fit:cover}
+
+table{width:100%;border-collapse:collapse;margin-top:10px}
+th,td{padding:10px 8px;text-align:left;font-size:14px}
+thead th{color:var(--muted);font-size:12px}
+
+.btn{
+  background:var(--accent);
+  color:#fff;padding:8px 12px;
+  border-radius:8px;border:none;
+  cursor:pointer;font-weight:700
+}
+
+.stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px}
+
+.stat{padding:12px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent)}
+
+.news-list{display:flex;flex-direction:column;gap:12px}
+.news-item{display:flex;gap:12px;align-items:flex-start}
+.news-item img{width:84px;height:56px;border-radius:8px;object-fit:cover}
+
+.poll-options{display:flex;flex-direction:column;gap:8px}
+
+.comment-box{
+  width:100%;padding:8px;border-radius:8px;
+  background:transparent;border:1px solid rgba(255,255,255,0.04);color:inherit
+}
+
+.comment-buttons{display:flex;gap:8px;margin-top:8px}
+
+.clear-btn{
+  background:transparent;border:1px solid rgba(255,255,255,0.04);
+  padding:8px;border-radius:8px;color:var(--muted)
+}
+
+.comments{display:flex;flex-direction:column;gap:10px;margin-top:10px}
+
+.links{display:flex;flex-direction:column;gap:8px;margin-top:8px;color:var(--muted)}
+.links a{text-decoration:none;color:var(--muted)}
+
+footer{padding:18px;text-align:center;color:var(--muted);font-size:13px}
+
+@media (max-width:900px){
+  .grid{grid-template-columns:1fr}
+  .players{grid-template-columns:1fr}
+  .stats-grid{grid-template-columns:repeat(2,1fr)}
+}

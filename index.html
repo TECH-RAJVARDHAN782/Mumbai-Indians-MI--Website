@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mumbai Indians — Fan Hub</title>
+  <meta name="description" content="Mumbai Indians fan hub: squad, fixtures, stats, news, media and fan features — data collected from official sources.">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <div class="brand">
+      <img src="MI Logo.jpg" class="logo" alt="MI Logo">
+      <div>
+        <div style="font-weight:800">Mumbai Indians</div>
+        <div style="font-size:12px;color:var(--muted)">Official sources: IPL, Mumbai Indians, ESPNcricinfo</div>
+      </div>
+    </div>
+    <nav>
+      <a href="#overview">Overview</a>
+      <a href="#schedule">Schedule</a>
+      <a href="#players">Players</a>
+      <a href="#stats">Stats</a>
+      <a href="#news">News</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="grid">
+      <section>
+        <div id="overview" class="card">
+          <div style="display:flex;align-items:center;justify-content:space-between">
+            <div>
+              <h2 style="margin:0">Mumbai Indians</h2>
+              <div style="color:var(--muted);margin-top:6px">Five-time IPL champions · Home: Wankhede Stadium</div>
+              <div style="margin-top:8px;color:var(--muted)">Captain: <strong id="captain">—</strong> · Head Coach: <strong id="coach">—</strong></div>
+            </div>
+            <div style="text-align:right">
+              <div style="font-size:28px;font-weight:800">MI</div>
+              <div style="color:var(--muted)">Founded 2008</div>
+            </div>
+          </div>
+        </div>
+
+        <div id="schedule" class="card" style="margin-top:16px">
+          <h3 style="margin-top:0">Fixtures & Results (2025)</h3>
+          <table id="scheduleTable">
+            <thead><tr><th>Date</th><th>Opponent</th><th>Venue</th><th>Result</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+
+        <div id="players" class="card" style="margin-top:16px">
+          <h3 style="margin-top:0">Squad</h3>
+          <div class="players" id="playersGrid"></div>
+        </div>
+
+        <div id="stats" class="card" style="margin-top:16px">
+          <h3 style="margin-top:0">Team & Player Highlights</h3>
+          <div class="stats-grid" id="statsGrid"></div>
+        </div>
+
+        <div id="news" class="card" style="margin-top:16px">
+          <h3 style="margin-top:0">Latest News</h3>
+          <div class="news-list" id="newsList"></div>
+        </div>
+      </section>
+
+      <aside class="right">
+        <div class="card" style="margin-bottom:14px">
+          <h4 style="margin-top:0">Live Ticker</h4>
+          <div id="liveTicker" style="min-height:48px;color:var(--muted)">No live match right now.</div>
+        </div>
+
+        <div class="card" style="margin-bottom:14px">
+          <h4 style="margin-top:0">Fan Poll</h4>
+          <div style="font-size:14px;margin-bottom:8px">Who will be Player of the Match?</div>
+          <div class="poll-options" id="pollOptions"></div>
+          <div style="margin-top:8px"><button class="btn" onclick="submitPoll()">Vote</button></div>
+          <div id="pollResults" style="margin-top:8px;color:var(--muted)"></div>
+        </div>
+
+        <div class="card" style="margin-bottom:14px">
+          <h4 style="margin-top:0">Fan Forum</h4>
+          <textarea id="commentInput" placeholder="Share..." class="comment-box"></textarea>
+          <div class="comment-buttons">
+            <button class="btn" onclick="postComment()">Post</button>
+            <button class="clear-btn" onclick="clearComments()">Clear</button>
+          </div>
+          <div class="comments" id="comments"></div>
+        </div>
+
+        <div class="card">
+          <h4 style="margin-top:0">Quick Links</h4>
+          <div class="links">
+            <a href="https://www.mumbaiindians.com/" target="_blank">Official MI site</a>
+            <a href="https://www.iplt20.com/teams/mumbai-indians" target="_blank">IPL team page</a>
+            <a href="https://www.espncricinfo.com/team/mumbai-indians-335978" target="_blank">ESPNcricinfo</a>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer>Data pulled from official sources. Use for demo purposes.</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
